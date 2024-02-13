@@ -28,6 +28,10 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  position: fixed;
+  left: 15px;
+  right: 15px;
+  z-index: 1;
 }
 .logo-html {
   border: 5px solid lightblue;
@@ -59,6 +63,7 @@ main {
   padding: 2em 1em;
   margin-bottom: 1.5em;
   position: relative;
+  margin-block-start: 22rem;
 }
 section {
   background-color: #e3e3e3;
@@ -79,7 +84,19 @@ h1 {
   font-size: 2.6rem;
   font-weight: bold;
   letter-spacing: -0.03em;
-  margin-bottom: 0.7em;
+}
+
+.contenitore-titolo {
+  display: inline-block;
+  position: relative;
+  margin-block-end: 2rem;
+}
+.contenitore-titolo img {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 50%;
 }
 p,
 address,
@@ -97,7 +114,7 @@ ol {
   margin-left: 2em;
 }
 a {
-  color: #00a0c6;
+  color: #3f6bca;
   font-weight: bold;
 }
 strong {
@@ -189,21 +206,50 @@ aside div p:last-child {
   font-size: 0.8em;
   text-align: right;
 }
-.torna-su {
+
+.torna-su a {
+  display: block;
+  height: 6rem;
+  width: 6rem;
   position: fixed;
   z-index: 1;
   right: 0;
   bottom: 0;
+  color: violet;
+  padding-inline: 1rem;
+  border: 2px solid white;
+  background-color: rgba(225, 225, 225, 0.2);
+  backdrop-filter: blur(10px);
+  font-size: 4rem;
+  border-radius: 5px;
 }
 .calendario {
-  position: fixed;
-  right: 0;
-  bottom: 5rem;
-}
-.add {
+  display: block;
+  height: 6rem;
+  width: 6rem;
   position: fixed;
   right: 0;
   bottom: 10rem;
+  padding-inline: 1rem;
+  border: 2px solid white;
+  background-color: rgba(225, 225, 225, 0.2);
+  backdrop-filter: blur(10px);
+  font-size: 4rem;
+  border-radius: 10px;
+}
+.add {
+  display: block;
+  height: 6rem;
+  width: 6rem;
+  position: fixed;
+  right: 0;
+  bottom: 20rem;
+  padding-inline: 1rem;
+  border: 2px solid white;
+  background-color: rgba(225, 225, 225, 0.2);
+  backdrop-filter: blur(10px);
+  font-size: 4rem;
+  border-radius: 10px;
 }
 
 /* FOOTER */
@@ -298,13 +344,21 @@ section h2 {
 
   .calendario {
     position: fixed;
-    right: 0;
-    top: 5rem;
+    right: 2rem;
+    top: 10rem;
+    z-index: 2;
   }
   .add {
     position: fixed;
-    right: 0;
-    top: 0;
+    right: 2rem;
+    top: 2rem;
+    z-index: 2;
+  }
+  .torna-su {
+    right: 2rem;
+  }
+  main {
+    margin-block-start: 15rem;
   }
 
   table {
