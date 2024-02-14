@@ -34,7 +34,7 @@ header {
   z-index: 1;
 }
 .logo-html {
-  border: 5px solid lightblue;
+  border: 5px solid #019cc2;
 }
 header div img {
   margin-bottom: 20px;
@@ -290,16 +290,24 @@ section h2 {
 .contenitore-html-logo {
   position: relative;
   margin-block-end: 2rem;
+  line-height: 0;
+}
+
+.img-html {
+  display: inline-block;
+  position: relative;
+  border: 5px solid #9d1d6c;
+  margin-inline-end: 2rem;
 }
 
 .contenitore-html-logo img {
   position: relative;
-  margin-inline-end: 2rem;
 }
 
 .contenitore-html-logo p {
   display: inline-block;
   position: absolute;
+  line-height: 1;
 }
 
 @media screen and (min-width: 577px) {
